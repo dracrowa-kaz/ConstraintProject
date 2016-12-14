@@ -12,9 +12,11 @@
         android:layout_height="29dp"
         android:text="Hello World!"
         android:textAlignment="center"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        android:id="@+id/textViewMain" />
+        android:id="@+id/textViewMain"
+        tools:text="main text"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
@@ -35,13 +37,28 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <Button
-        android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button"
         app:layout_constraintLeft_toLeftOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
         android:layout_marginTop="50dp"
-        android:onClick="btnTapped" />
+        android:onClick="btnTapped"
+        tools:text="main button " />
+
+    <fragment
+        android:layout_width="277dp"
+        android:layout_height="186dp"
+        android:name="com.kaz.constraintproject.fragment.Main"
+        android:id="@+id/fragment2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_marginBottom="8dp"
+        tools:layout="@layout/fragment_main" />
 
 </android.support.constraint.ConstraintLayout>
